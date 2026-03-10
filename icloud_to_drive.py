@@ -201,7 +201,6 @@ async def crawl_and_upload(shared_link, creds, photos_folder_id, videos_folder_i
             await upload_queue.put(None)
         await asyncio.gather(*workers)
         print("ĐÃ XONG TOÀN BỘ!")
-
 # HÀM CHÍNH (MAIN)
 def main():
     print("Đang khởi tạo kết nối Google Drive...")
@@ -213,4 +212,5 @@ def main():
     asyncio.run(crawl_and_upload(LINK_CHIA_SE, creds, photos_folder_id, videos_folder_id, so_luong_tua))
 
 if __name__ == "__main__":
+
     main()
